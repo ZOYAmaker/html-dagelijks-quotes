@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dagelijkse Inspiratie</title>
+  <style>
+    body {
+      background-color: #f3f0fa;
+      color: #4a4a4a;
+      font-family: 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    .quote-box {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      color: #836fa9;
+    }
+    .quote {
+      font-size: 1.4rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="quote-box">
+    <h1>Quote van de dag ✨</h1>
+    <p class="quote" id="quote"></p>
+  </div>
+
+  <script>
+    const quotes = [
+      "Believe you can and you're halfway there.",
+      "Je hoeft niet perfect te zijn om waardevol te zijn.",
+      "Every day is a second chance.",
+      "Vandaag is een nieuwe start.",
+      "Do something today that your future self will thank you for.",
+      "Wees zacht voor jezelf, je doet je best.",
+      "You are stronger than you think.",
+      "Durf te groeien, ook als het eng is.",
+      "Happiness is an inside job.",
+      "Gevoelens zijn geen feiten.",
+        "The only way to do great work is to love what you do.",
+        "Success is not the key to happiness. Happiness is the key to success.",
+        "The future belongs to those who believe in the beauty of their dreams.",
+        "You miss 100% of the shots you don't take.",
+        "The only limit to our realization of tomorrow will be our doubts of today.",
+        "Success is not in what you have, but who you are.",
+        "Success is walking from failure to failure with no loss of enthusiasm.",
+        "Success usually comes to those who are too busy to be looking for it.",
+        "Don't watch the clock; do what it does. Keep going.",
+        "The way to get started is to quit talking and begin doing.",
+        "If you want to achieve greatness stop asking for permission.",
+        "The future depends on what you do today.",
+        "It does not matter how slowly you go as long as you do not stop.",
+        "Act as if what you do makes a difference. It does.",
+        "Success is not how high you have climbed, but how you make a positive difference to the world.",
+        "You cannot swim for new horizons until you have courage to lose sight of the shore.",
+        "The only place where success comes before work is in the dictionary.",
+        "Success is not the absence of failure; it's the persistence through failure.",
+        "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart.",
+        "The only way to achieve the impossible is to believe it is possible.",
+        "Success is not about how much money you make, but the difference you make in people's lives.",
+        "Success is not about being the best. It's about always getting better.",
+        "Success is not about what you have, but what you give.",
+        "Success is not about what you accomplish in life, but what you inspire others to do.",
+        "You are stronger than you think.",
+      "Rust is ook productief.",
+      "Take a deep breath. You're doing fine.",
+      "Vandaag kies ik voor mezelf.",
+      "Growth begins where comfort ends.",
+      "Je hoeft niet perfect te zijn om waardevol te zijn.",
+      "Small steps every day lead to big changes.",
+      "Je gevoel mag er zijn.",
+      "Trust the timing of your life.",
+      "Ik laat los wat mij niet meer dient.",
+      "You are not behind. You are on your path.",
+      "Het is oké om een pauze te nemen.",
+      "Be proud of how far you've come.",
+      "Zorg goed voor jezelf, je bent het waard.",
+      "Healing is not linear.",
+      "Je mag zacht zijn voor jezelf.",
+      "Let today be the start of something new.",
+      "Wat je voelt, vertelt je iets belangrijks.",
+      "Even on tough days, you are doing your best.",
+      "Elke dag is een nieuwe kans.",
+      "Believe in the power of yet.",
+      "Mijn kleine stapjes zijn ook vooruitgang.",
+      "Your energy is sacred. Protect it.",
+      "Je hoeft het niet allemaal alleen te doen.",
+      "Be the person you needed when you were younger.",
+      "Luister naar je lichaam, het fluistert altijd eerst.",
+      "Progress, not perfection.",
+      "Morgen is er weer een nieuwe kans.",
+      "You can’t pour from an empty cup.",
+      "Jij mag prioriteit zijn in je eigen leven.",
+      "Everything you need is already inside you.",
+      "Ook kleine stapjes brengen je dichterbij.",
+      "Inhale peace, exhale stress.",
+      "Jouw tempo is goed genoeg.",
+      "You are allowed to start again.",
+      "Je hoeft niet alles te begrijpen, alleen te voelen.",
+      "Feel it. Heal it. Release it.",
+      "Je mag vertragen.",
+      "The present moment is all you ever have.",
+      "Elke emotie is een gids.",
+      "You are enough. Exactly as you are.",
+      "Zorg dragen voor jezelf is geen luxe, maar noodzaak.",
+      "Let go of what you can't control.",
+      "Het is oké om het even niet te weten.",
+      "Just keep going. You’ve got this.",
+      "Geef jezelf dezelfde liefde die je aan anderen geeft.",
+      "You are becoming who you're meant to be.",
+      "Soms zit de groei in het ongemak.",
+      "Be gentle with yourself.",
+      "Je mag kiezen voor zachtheid.",
+    ];
+
+    const today = new Date();
+    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+    const quote = quotes[dayOfYear % quotes.length];
+
+    document.getElementById("quote").innerText = quote;
+  </script>
+</body>
+</html>
